@@ -1,0 +1,85 @@
+site_name: Ray Chad Docs
+site_description: Documentation for Ray Chad
+site_author: Your Name
+site_url: https://yourusername.github.io/ray-chad-docs/
+repo_name: yourusername/ray-chad-docs
+repo_url: https://github.com/yourusername/ray-chad-docs
+edit_uri: edit/main/docs/
+
+theme:
+  name: material
+  logo: assets/logo.png
+  favicon: assets/favicon.png
+  palette:
+    # Light mode
+        - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    # Dark mode
+        - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+        - navigation.tabs
+        - navigation.sections
+        - navigation.expand
+        - navigation.top
+        - navigation.tracking
+        - search.suggest
+        - search.highlight
+        - content.code.copy
+        - content.code.annotate
+        - header.autohide
+
+nav:
+    - Home: index.md
+    - Getting Started:
+            - Installation: getting-started/installation.md
+            - Quick Start: getting-started/quickstart.md
+    - Guides:
+            - Basic Usage: guides/basic-usage.md
+            - Advanced: guides/advanced.md
+    - API Reference: api.md
+    - Changelog: changelog.md
+    - About: about.md
+
+plugins:
+    - search
+    - git-revision-date-localized:
+      enable_creation_date: true
+
+markdown_extensions:
+    - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+    - pymdownx.inlinehilite
+    - pymdownx.snippets
+    - pymdownx.superfences
+    - pymdownx.tabbed:
+      alternate_style: true
+    - pymdownx.tasklist:
+      custom_checkbox: true
+    - admonition
+    - toc:
+      permalink: true
+    - attr_list
+    - md_in_html
+
+extra:
+  social:
+        - icon: fontawesome/brands/github
+      link: https://github.com/yourusername/ray-chad-docs
+        - icon: fontawesome/brands/discord
+      link: https://discord.gg/your-invite
+  analytics:
+    provider: google
+    property: G-XXXXXXXXXX  # remove if you don't use GA
